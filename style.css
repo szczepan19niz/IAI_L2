@@ -1,18 +1,21 @@
 body {
     background-color: #a8e5c4;
 	font:16px Arial;
+	margin-top:5px;
+	margin-bottom:5px;
 }
 
 ul, li {
     display: inline;
 }
 
-p, h1{
-	margin-left:10px;
-	margin-right:10px;
+a {
+	color:white;
+	text-shadow: 2px 2px #343a40;
 }
 
 #header {
+	width:95%;
 	line-height: 80px;
 	text-align:center;
     background-color: #000000;
