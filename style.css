@@ -28,6 +28,15 @@ a:hover {
 	border:thick double #ffffff;
 }
 
+ul.list > li {
+	list-style-type: circle;
+	display: block;
+}
+
+iframe {
+	margin: 5px 0 5px 0;
+	width: 100%;
+}
 
 
 
