@@ -9,9 +9,16 @@ ul, li {
 }
 
 a {
-	color:white;
-	text-shadow: 2px 2px #343a40;
+	border-radius: 35px;
+	padding:10px;
+	background-color: antiquewhite;
 }
+a:hover {
+	background-color:#767d84;
+	color:white;
+	transition: all 0.5s;
+}
+
 
 #header {
 	line-height: 80px;
