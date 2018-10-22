@@ -1,11 +1,16 @@
 body {
     background-color: #a8e5c4;
 	font:16px Arial;
-	margin: 5px 5px 5px 5px;
+	margin: 10px 10px 10px 10px;
 }
 
-ul, li {
-    display: inline;
+div.list ul li {
+	display:block;
+}
+
+ul, li{
+	display: inline;
+	list-style-type:none;
 }
 
 a {
@@ -13,12 +18,17 @@ a {
 	padding:10px;
 	background-color: antiquewhite;
 }
+
 a:hover {
 	background-color:#767d84;
 	color:white;
 	transition: all 0.5s;
 }
 
+iframe {
+	margin: 5px 0 5px 0;
+	width: 100%;
+}
 
 #header {
 	line-height: 80px;
@@ -28,15 +38,10 @@ a:hover {
 	border:thick double #ffffff;
 }
 
-ul.list > li {
-	list-style-type: circle;
-	display: block;
-}
 
-iframe {
-	margin: 5px 0 5px 0;
-	width: 100%;
-}
+
+
+
 
 
 
