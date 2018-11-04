@@ -1,15 +1,3 @@
-//1
-//console.log("Hello World!");
-
-//2
-//let array=[1,2,3,4,5,6,7,8,9,10];
-//for(let i=1; i<=10; i++){   
-//    for(let j=1; j<=10; j++){
-//        array.push(i*j);
-//   }
-//    console.log(array);
-//}
-
 
 //3
 (function() {
