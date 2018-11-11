@@ -230,6 +230,9 @@ new_game.addEventListener('click', function() {
     remove_class(display_quiz, 'display_on');
     add_class(display_buttons, 'display_on');
 
+    remove_class(back, 'disabled');
+    remove_class(next, 'disabled');
+
     all_points+=points;
     points=0;
 });
@@ -239,18 +242,12 @@ for(let i=0; i<answers.length; i++){
     answers[i].addEventListener('click', function (event) {
         if(event.target.innerHTML === preQuestions[index].correct_answer) {
             event.target.classList.add('is-valid');
-            add_class(answers[0],'disabled');
-			add_class(answers[1],'disabled');
-			add_class(answers[2],'disabled');
-			add_class(answers[3],'disabled');
+            add_all();
             points++;    
         }
         else {
             event.target.classList.add('is-invalid');
-            add_class(answers[0],'disabled');
-			add_class(answers[1],'disabled');
-			add_class(answers[2],'disabled');
-			add_class(answers[3],'disabled');
+            add_all();
         }
     });
 }
@@ -268,16 +265,22 @@ function setQuestion(index) {
 setQuestion(index);
 
 
+function add_all() {
+    for(let i=0; i<answers.length; i++){
+        add_class(answers[i], 'disabled');
+    }
+}
+
+
 function remove_all() {
     answers.forEach(function(element){
         element.classList.remove('is-valid');
         element.classList.remove('is-invalid');
-
-        remove_class(answers[0], 'disabled');
-        remove_class(answers[1], 'disabled');
-        remove_class(answers[2], 'disabled');
-        remove_class(answers[3], 'disabled');
     });
+      
+    for(let i=0; i<answers.length; i++){
+        remove_class(answers[i], 'disabled');
+    }
 }
 
 
@@ -288,7 +291,10 @@ next.addEventListener('click', function () {
     else if(index == 19) {
         add_class(new_game, 'display_on');
         add_class(score, 'display_on');
- 
+
+        add_class(back, 'disabled');
+        add_class(next, 'disabled');
+
         score.innerHTML="Liczba zdobytych punktów: " +points;
     }
     
@@ -302,7 +308,3 @@ back.addEventListener('click', function() {
    remove_all();
    setQuestion(index); 
 });
-
-
-
-
